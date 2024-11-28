@@ -1,6 +1,7 @@
 package com.example.applicationweather;
 
 import android.annotation.SuppressLint;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
@@ -19,6 +20,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.JsonRequest;
 import com.android.volley.toolbox.Volley;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -70,14 +72,25 @@ public class MainActivity extends AppCompatActivity {
                     JSONArray array= response.getJSONArray("weather");
                     Object name = response.get("name");
                     JSONObject object = array.getJSONObject(0);
-                    Log.d("Tag","resultat = " +array.toString()); //log le resultat du logcat
+                    Log.d("Tag","resultat = " +array.toString()); // log resultat du logcat
+
                     mcity.setText(name.toString());
                     mtemp.setText(String.valueOf(Math.ceil(Double.parseDouble(main_object.get("temp").toString()) - 273.15))); // pour mettre en degreés et arrondir
-                    mdescription.setText(object.get("description").toString()); // mettre le text du logcat "description"
+                    mdescription.setText(object.get("main").toString()); // mettre le text du logcat "description"
+                    String icon = object.getString("icon");
+                    String city = object.getString("name");
+                    String description = object.getString("description");
+
+                    //gestion de l'image
+                    String imageUri="http://openweathermap.org/img/w/" + icon + ".png";
+                    imgicon = findViewById(R.id.imgicon);
+                    Uri myUri = Uri.parse(imageUri);
+                    Picasso.with(MainActivity.this).load(myUri).resize(250,250).into(imgicon);
 
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
+
 
             }
         }, new Response.ErrorListener() {

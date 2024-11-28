@@ -18,7 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.799" />
+        app:layout_constraintVertical_bias="0.892" />
 
     <TextView
         android:id="@+id/mdate"
@@ -36,29 +36,29 @@
     <TextView
         android:id="@+id/mcity"
         android:layout_width="313dp"
-        android:layout_height="52dp"
+        android:layout_height="88dp"
         android:fontFamily="monospace"
         android:text="City"
         android:textAlignment="center"
         android:textColor="#2196F3"
-        android:textSize="34sp"
+        android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mdate"
-        app:layout_constraintVertical_bias="0.107" />
+        app:layout_constraintVertical_bias="0.044" />
 
     <ImageView
         android:id="@+id/imgicon"
-        android:layout_width="140dp"
-        android:layout_height="156dp"
+        android:layout_width="220dp"
+        android:layout_height="222dp"
+        android:contentDescription="Image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mcity"
-        app:layout_constraintVertical_bias="0.158"
-        app:srcCompat="@drawable/sunnyweather" />
+        app:layout_constraintVertical_bias="0.156" />
 
     <TextView
         android:id="@+id/mtemp"
