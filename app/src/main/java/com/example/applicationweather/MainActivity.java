@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.d("Tag","resultat = " +array.toString()); // log resultat du logcat
                     mcity.setText(name.toString());
                     mtemp.setText(String.valueOf(Math.ceil(Double.parseDouble(main_object.get("temp").toString()) - 273.15)) + "º C"); // pour mettre en degreés et arrondir
-                    mdescription.setText(object.get("main").toString()); // mettre le text du logcat "description"
+                    mdescription.setText(object.get("description").toString()); // mettre le text du logcat "description"
                     maxtemp.setText(String.valueOf("High: "+ Math.ceil(Double.parseDouble(main_object.get("temp_max").toString()) - 273.15)));
                     mintemp.setText(String.valueOf("Low: "+ Math.ceil(Double.parseDouble(main_object.get("temp_min").toString()) - 273.15)));
                     String icon = object.getString("icon");

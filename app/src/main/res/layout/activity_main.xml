@@ -36,13 +36,13 @@
 
     <TextView
         android:id="@+id/mcity"
-        android:layout_width="313dp"
+        android:layout_width="385dp"
         android:layout_height="88dp"
         android:fontFamily="monospace"
         android:text="City"
         android:textAlignment="center"
         android:textColor="#2196F3"
-        android:textSize="60sp"
+        android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
