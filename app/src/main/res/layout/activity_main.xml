@@ -9,10 +9,11 @@
 
     <TextView
         android:id="@+id/mdescription"
-        android:layout_width="299dp"
-        android:layout_height="26dp"
+        android:layout_width="298dp"
+        android:layout_height="38dp"
         android:text="Description"
         android:textAlignment="center"
+        android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,6 +70,36 @@
         android:textSize="48sp"
         app:layout_constraintBottom_toTopOf="@+id/mdescription"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgicon" />
+        app:layout_constraintTop_toBottomOf="@+id/imgicon"
+        app:layout_constraintVertical_bias="0.227" />
+
+    <TextView
+        android:id="@+id/maxtemp"
+        android:layout_width="125dp"
+        android:layout_height="29dp"
+        android:text="Max Temperature"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/mdescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.241"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mtemp"
+        app:layout_constraintVertical_bias="0.275" />
+
+    <TextView
+        android:id="@+id/mintemp"
+        android:layout_width="130dp"
+        android:layout_height="31dp"
+        android:text="Min Temperature"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/mdescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mtemp"
+        app:layout_constraintVertical_bias="0.289" />
 </androidx.constraintlayout.widget.ConstraintLayout>
